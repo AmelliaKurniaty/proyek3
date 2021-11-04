@@ -1,16 +1,3 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="img/logo/logo.png" rel="icon">
-  <title>Login Page</title>
-  <link href="<?= base_url() ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="<?= base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="<?= base_url() ?>assets/css/ruang-admin.min.css" rel="stylesheet">
-</head>
-
 <body class="bg-gradient-login">
   <!-- Login Content -->
   <div class="container-login">
@@ -40,19 +27,12 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <a href="index.html" class="btn btn-primary btn-block">Login</a>
+                      <a href="login" class="btn btn-primary btn-block">Login</a>
                     </div>
-                    <hr>
-                    <a href="index.html" class="btn btn-google btn-block">
-                      <i class="fab fa-google fa-fw"></i> Login with Google
-                    </a>
-                    <a href="index.html" class="btn btn-facebook btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                    </a>
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="font-weight-bold small" href="register.html">Create an Account!</a>
+                    <a class="font-weight-bold small" href="register">Create an Account!</a>
                   </div>
                   <div class="text-center">
                   </div>
@@ -64,12 +44,3 @@
       </div>
     </div>
   </div>
-<script src="<?= base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
-  <script src="<?= base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url() ?>vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="<?= base_url() ?>assets/js/ruassets/ang-admin.min.js"></script>
-  <script src="<?= base_url() ?>assets/vendor/chart.js/Chart.min.js"></script>
-  <script src="<?= base_url() ?>assets/js/demo/chart-area-demo.js"></script>  
-</body>
-
-</html>
