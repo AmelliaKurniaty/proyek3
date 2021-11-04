@@ -2,14 +2,15 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class DashboardController extends CI_Controller {
+    class AdminController extends CI_Controller {
     
         public function index()
         {
-            $this->load->view('welcome_page');
+            $this->load->view('admin/data_siswa');
         }
     
     }
     
-    /* End of file DashboardController.php */
+    /* End of file AdminController.php */
+    
 ?>
