@@ -1,46 +1,103 @@
-<body class="bg-gradient-login">
-  <!-- Login Content -->
-  <div class="container-login">
-    <div class="row justify-content-center">
-      <div class="col-xl-6 col-lg-12 col-md-9">
-        <div class="card shadow-sm my-5">
-          <div class="card-body p-0">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="login-form">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Login</h1>
-                  </div>
-                  <form class="user">
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
-                        placeholder="Enter Email Address">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small" style="line-height: 1.5rem;">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember
-                          Me</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <a href="login" class="btn btn-primary btn-block">Login</a>
-                    </div>
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="font-weight-bold small" href="register">Create an Account!</a>
-                  </div>
-                  <div class="text-center">
-                  </div>
-                </div>
-              </div>
+<!-- <?=
+form_open('login/proses_login');
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Login Page</title>
+
+  <!-- Plugin for fontawesome -->
+  <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.css')?>" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="<?php echo base_url('assets/css/sb-admin.css')?>" rel="stylesheet">
+
+</head>
+
+<body class="bg-white">
+<br><br><br><br>
+  <div class="container" style=" margin-top: 50px">
+    <div class="card card-login bg-light mx-auto mt-5">
+      <div class="card-header" style="color: #; text-align: center;"><h2>LOGIN</h2></div>
+      <div class="card-body">
+      <?php echo form_open('login/proses_login'); ?>
+      <form method="post">		
+        <div class="form-group">
+          <label for="exampleInputUsername1">Username</label>
+          <input type="text" name="username" class="form-control" id="inputUsername" aria-describedby="emailHelp" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <small class="smallSignUp text-muted" style="margin-top=20px;">Apakah anda punya akun? <a href="<?= base_url('register') ?>">Daftar Disini</a></small>
+        
+      </form>
+      <!-- <form method="post">		
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required="required" autofocus="autofocus">
+              <label for="inputUsername">Username</label>
             </div>
           </div>
-        </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <label for="inputPassword">Password</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg float-right" id="btnlogin" style="padding:3px 8px;">Login</button>
+          <small class="smallSignUp text-muted" style="margin-top=20px;">Apakah anda punya akun? <a href="<?= base_url('register') ?>">Daftar Disini</a></small>
+        </form>  -->
       </div>
     </div>
   </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="welcome" style="margin-left:380px;">BEASISWA PENDIDIKAN BUKIT ASAM</a>
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      
+  </div>
+</nav>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js')?>"></script>
+
+  <!-- Page level plugin JavaScript-->
+  <script src="<?php echo base_url('assets/vendor/datatables/jquery.dataTables.js')?>"></script>
+  <script src="<?php echo base_url('assets/vendor/datatables/dataTables.bootstrap4.js')?>"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="<?php echo base_url('assets/js/sb-admin.min.js')?>"></script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
+<!-- <?=
+form_close();
+?> -->
