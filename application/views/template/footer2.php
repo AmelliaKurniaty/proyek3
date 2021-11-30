@@ -22,26 +22,19 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
               <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-              <a class="btn btn-primary" href="<?php base_url()?>login/proses_logout">Logout</a>
+              <a class="btn btn-primary" href="<?php echo base_url('login/proses_logout') ?>">Logout</a>
             </div>
           </div>
         </div>
       <div>
-
       <!-- Bootstrap core JavaScript-->
-      
-      <script src="<?= base_url()?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-      <!-- Core plugin JavaScript-->
-      <script src="<?= base_url()?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-      <!-- Page level plugin JavaScript-->
-      <script src="<?= base_url()?>assets/vendor/datatables/jquery.dataTables.js"></script>
-      <script src="<?= base_url()?>assets/vendor/datatables/dataTables.bootstrap4.js"></script>
-
-      <!-- Custom scripts for all pages-->
-      <script src="<?= base_url()?>assets/js/sb-admin.min.js"></script>
-
-      </body>
-
-      </html>
+      <!-- Kalau sudah memiliki htaccess, gunakan script  -->
+      <script src="<?= base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
+      <script src="<?= base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="<?= base_url() ?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+      <script src="<?= base_url() ?>assets/js/ruang-admin.min.js"></script>
+      <!-- Page level plugins -->
+      <script src="<?= base_url() ?>assets/vendor/datatables/jquery.dataTables.min.js"></script>
+      <script src="<?= base_url() ?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  </body>
+</html>

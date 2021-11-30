@@ -15,21 +15,15 @@
             $this->db->join('prodi', 'prodi.id_prodi = siswa.prodi_id','Left');
             
             if ( $key ) {
-                
                 $this->db->where($key);
                 $query = $this->db->get();
                 return $query->row_array();
-            
             } else {
-
                 $query = $this->db->get();
                 return $query->result_array();
             }
-            
         }
-        
     }
-    
     /* End of file beasiswa_model.php */
     
 ?>

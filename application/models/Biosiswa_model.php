@@ -17,7 +17,6 @@
         }
 
         function cekBiodata( $nisn ){
-
             return $this->db->where('nisn', $nisn)->get('siswa');
         }
     
@@ -47,19 +46,13 @@
             $photo = "";
             // cek data berkas 
             $getDataBerkas = $this->db->get_where('siswa', array('nisn' => $nisn))->row();
-            if ( $this->upload->do_upload('userfile') ) {
-    
-                
+            if ( $this->upload->do_upload('userfile') ) {         
                 $photo = $this->upload->data('file_name');
-                
                 if ( $getDataBerkas->foto ) {
-
                     $dir = './assets/berkas/foto/'. $getDataBerkas->foto; // delete file directory
                     unlink( $dir );
                 }
-
             } else {
-
                 $photo = $getDataBerkas->foto;
                 // echo $this->upload->display_errors();
             }
@@ -92,8 +85,6 @@
     
                 return $config;
             }
-    
-    
             // action upload 
             function actUploadDocument( $section = null ){
     

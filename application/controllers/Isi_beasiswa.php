@@ -25,16 +25,11 @@
             $data['siswa']=$this->Isibeasiswa_model->getSiswabyId($nisn);
 
             $data['cekBeasiswa'] = $this->Isibeasiswa_model->cekBeasiswa( $nisn ); 
-            
            
             $this->load->view('template/header2');
             $this->load->view('siswa/isi_beasiswa', $data);
             $this->load->view('template/footer2');
         }
-
-
-       
-
 
         public function tambah(){
             $data['title']='Tambah Data Beasiswa';
@@ -49,15 +44,13 @@
             $this->load->view('template/footer2');
         }
 
-         public function tambahBaru(){
+        public function tambahBaru(){
             $this->Isibeasiswa_model->tambahData();
             $this->session->set_flashdata('flash-data','ditambahkan');
             redirect('isi_beasiswa','refresh');  
-         }
+        }
 
-
-         function getJurusan() {
-
+        function getJurusan() {
             $getPoliteknik = $this->input->get('id_politeknik');
 
             $kondisi = array('id_politeknik' => $getPoliteknik);
@@ -145,10 +138,7 @@
             $this->Isibeasiswa_model->edit();
             $this->session->set_flashdata('flash-data','diedit');
             redirect('isi_beasiswa','refresh');  
-        }
-    
+        }  
     }
-    
     /* End of file isi_beasiswa.php */
-    
 ?>
