@@ -27,7 +27,6 @@
 
 
         function cekBeasiswa( $nisn ){
-
             return $this->db->where('nisn', $nisn)->get('siswa');
         }
         

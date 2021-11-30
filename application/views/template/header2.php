@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link href="<?php echo base_url('assets/img/logo/logoo.png')?>" rel="icon">
   <title>Pendaftaran Beasiswa</title>
   <link href="<?= base_url() ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="<?= base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -18,7 +19,7 @@
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
         <div class="sidebar-brand-icon">
-          <img src="<?= base_url() ?>assets/img/logo/fix.png">
+          <img src="<?= base_url() ?>assets/img/logo/logoo.png">
         </div>
         <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
       </a>
