@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2021 at 04:09 PM
+-- Generation Time: Dec 28, 2021 at 02:11 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -64,6 +64,7 @@ CREATE TABLE `berkas` (
 --
 
 INSERT INTO `berkas` (`nisn`, `sk_siswa`, `sk_bermaterai`, `sk_pernyataan_sekolah`, `slip_gaji`, `slip_listrik_rumah`, `denah_rumah`, `foto_rumah`, `ijasah`, `kartu_keluarga`) VALUES
+('1234', 'FILE-SK-SISWA-_1234-2021-11-30.pdf', 'FILE-SK-BERMATERAI-_1234-2021-12-07.pdf', NULL, 'FILE-SLIP-GAJI-_1234-2021-12-07.pdf', NULL, NULL, NULL, 'FILE-IJASAH-_1234-2021-12-071.pdf', NULL),
 ('5555', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('6', 'FILE-SK-SISWA-_6-2020-05-15.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
@@ -91,7 +92,13 @@ INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`, `id_politeknik`) VALUES
 (1108, 'Teknik Elektro', 2),
 (1109, 'Teknologi Informasi', 1),
 (1110, 'Teknik Sipil', 1),
-(1111, 'Teknik Elektro', 1);
+(1111, 'Teknik Elektro', 1),
+(1112, 'Teknik Kimia', 2),
+(1113, 'Teknik Elektro', 3),
+(1114, 'Teknik Mesin', 3),
+(1115, 'Teknik Kimia', 3),
+(1116, 'Teknik Listrik', 3),
+(1117, 'Teknologi Informatika', 3);
 
 -- --------------------------------------------------------
 
@@ -129,7 +136,11 @@ CREATE TABLE `politeknik` (
 
 INSERT INTO `politeknik` (`id_politeknik`, `nama_politeknik`) VALUES
 (1, 'Politeknik Negeri Malang'),
-(2, 'Politeknik Negeri Sriwijaya');
+(2, 'Politeknik Negeri Sriwijaya'),
+(3, 'Politeknik Negeri Banyuwangi'),
+(4, 'Politeknik Negeri Jakarta'),
+(5, 'Politeknik Negeri Surakarta'),
+(6, 'Politeknik Negeri Elektro Surabaya');
 
 -- --------------------------------------------------------
 
@@ -157,7 +168,9 @@ INSERT INTO `prodi` (`id_prodi`, `nama_prodi`, `id_jurusan`, `id_politeknik`) VA
 (9, 'D4-Akuntansi', 1106, 0),
 (10, 'D-4 Teknik Elektro', 1108, 0),
 (11, 'D3 Sistem Kelistrikan', 1108, 0),
-(13, 'D4 Teknik Elektronika', 1111, 0);
+(13, 'D4 Teknik Elektronika', 1111, 0),
+(14, 'D4 Teknik Informatika', 1117, 0),
+(15, 'D4 Teknik Kelistrikan', 1116, 0);
 
 -- --------------------------------------------------------
 
@@ -182,6 +195,13 @@ CREATE TABLE `siswa` (
   `prodi_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `siswa`
+--
+
+INSERT INTO `siswa` (`nisn`, `status_beasiswa`, `foto`, `nama_siswa`, `alamat_siswa`, `nama_orangtua`, `email`, `no_telepon`, `asal_sekolah`, `jurusan_sekolah`, `nilai_rata`, `politeknik_id`, `jurusan_id`, `prodi_id`) VALUES
+('1234', 0, 'PH-JIMIN)_-_1234-2021-11-30.PNG', 'jimin', 'jimin', 'jin', 'jimin@gmail.com', '0898764', 'seoul', 'Art', '88', 1, 1111, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -203,7 +223,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nisn`, `email`, `username`, `password`, `name`, `level`) VALUES
-(2, '', 'ppp', 'admin', 'admin', 'admin', 'admin');
+(2, '', 'admin@gmail.com', 'admin', 'admin', 'admin', 'admin'),
+(32, '1234', 'jimin@gmail.com', 'jimin', 'jimin', 'jimin', 'siswa');
 
 --
 -- Indexes for dumped tables
@@ -270,7 +291,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1112;
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1118;
 
 --
 -- AUTO_INCREMENT for table `pengumuman`
@@ -282,19 +303,19 @@ ALTER TABLE `pengumuman`
 -- AUTO_INCREMENT for table `politeknik`
 --
 ALTER TABLE `politeknik`
-  MODIFY `id_politeknik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_politeknik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `prodi`
 --
 ALTER TABLE `prodi`
-  MODIFY `id_prodi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_prodi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
